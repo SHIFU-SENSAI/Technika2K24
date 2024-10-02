@@ -1,0 +1,50 @@
+{
+  "name": "technika",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@supabase/supabase-js": "^2.39.7",
+    "axios": "^1.6.7",
+    "base-x": "^4.0.0",
+    "base62-random": "^0.3.5",
+    "crypto-js": "^4.2.0",
+    "firebase": "^10.8.1",
+    "react": "^18.2.0",
+    "react-awesome-reveal": "^4.2.8",
+    "react-dom": "^18.2.0",
+    "react-icons-kit": "^2.0.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-modal": "^3.16.1",
+    "react-qr-code": "^2.0.12",
+    "react-router-dom": "^6.22.1",
+    "react-toastify": "^10.0.4",
+    "uuid-base62": "^0.1.0",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.4"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
