@@ -7,24 +7,21 @@ const Contact = () => {
   const contacts = [
     {
       key: "1",
-      image:
-        "src/assets/365293.jpg",
+      image:"src/assets/365293.jpg",
       name: "Suryansh Sinha",
       phone: "+91 8252624667",
       insta:"https://www.instagram.com/_deo.shreyas_?igsh=MXVjcjlkY2ZjNzRpMQ==",
     },
     {
       key: "2",
-      image:
-        "src/assets/365293.jpg",
+      image:"src/assets/365293.jpg",
       name: "Balajee",
       phone: "+91 9693650110",
       insta: "https://www.instagram.com/_mr_harsh007_?igsh=OXhnajAwdnF6bnZy",
     },
     {
       key: "3",
-      image:
-        "src/assets/AsmanKumari.jpg",
+      image:"src/assets/AsmanKumari.jpg",
       name: "Asman Kumari",
       phone: "+91 7857809775",
       insta: "https://www.instagram.com/priyanshu24mach/",
