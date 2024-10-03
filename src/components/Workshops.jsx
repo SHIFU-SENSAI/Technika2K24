@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import WorkshopCard from "./WorkshopCard";
 import CardContainer from "./CardContainer"; // Import CardContainer
 import Eco from "../assets/eco.png";
@@ -68,17 +68,25 @@ const WorkshopDetails = ({ title, description, formLink }) => {
 
 const Workshops = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState(null);
-  const registerButtonRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
 
-  const handleWorkshopClick = (workshop) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimate(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleWorkshopClick = useCallback((workshop) => {
     setSelectedWorkshop(workshop);
-    if (registerButtonRef.current) {
-      registerButtonRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-    }
-  };
+    setTimeout(() => {
+      const detailsSection = document.getElementById("workshop-details");
+      if (detailsSection) {
+        detailsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }, 0);
+  }, []);
 
   return (
     <div className="relative container mx-auto overflow-hidden w-full">
@@ -96,19 +104,26 @@ const Workshops = () => {
 
       {/* Wrap workshop cards with CardContainer */}
       <CardContainer>
-        {workshopsData.map((workshop) => (
-          <WorkshopCard
+        {workshopsData.map((workshop, index) => (
+          <div
             key={workshop.id}
-            image={workshop.image}
-            title={workshop.title}
-            description={workshop.description}
-            onClick={() => handleWorkshopClick(workshop)}
-          />
+            className={`transform ${
+              animate ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+            } transition-all duration-500 ease-out`}
+            style={{ transitionDelay: `${index * 100}ms` }}
+          >
+            <WorkshopCard
+              image={workshop.image}
+              title={workshop.title}
+              description={workshop.description}
+              onClick={() => handleWorkshopClick(workshop)}
+            />
+          </div>
         ))}
       </CardContainer>
 
       {selectedWorkshop && (
-        <div ref={registerButtonRef} className="relative z-20">
+        <div id="workshop-details" className="relative z-20">
           <WorkshopDetails
             title={selectedWorkshop.title}
             description={selectedWorkshop.description}

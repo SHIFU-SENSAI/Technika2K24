@@ -10,21 +10,22 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-4 md:mb-0 text-center md:text-left">
             <h3 className="text-lg font-bold">TECHNIKA 2024</h3>
             <p className="text-base">INNOVATING TODAY, SUSTAINING TOMORROW</p>
-            <div className="mt-3">
-              <span className="text-base mr-3">FOLLOW US ON</span>
-              <a href="#" className="text-white hover:text-gray-400 inline-block mx-2">
-                <FaFacebookF size={24} />
-              </a>
-              <a href="#" className="text-white hover:text-gray-400 inline-block mx-2">
-                <FaYoutube size={24} />
-              </a>
-              <a href="#" className="text-white hover:text-gray-400 inline-block mx-2">
-                <FaInstagram size={24} />
-              </a>
+            <div className="mt-3 flex flex-col items-center md:items-start">
+              <span className="text-base mb-2">FOLLOW US ON</span>
+              <div>
+                <a href="#" className="text-white hover:text-blue-500 inline-block mx-2">
+                  <FaFacebookF size={24} />
+                </a>
+                <a href="https://www.youtube.com/@Technikabitp" className="text-white hover:text-red-500 inline-block mx-2">
+                  <FaYoutube size={24} />
+                </a>
+                <a href="https://www.instagram.com/technika_bitp/" className="text-white hover:text-pink-500 inline-block mx-2">
+                  <FaInstagram size={24} />
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Center Section: Logo and Copyright */}
           <div className="w-full md:w-1/3 flex flex-col items-center justify-center">
             <img
               src={BitLogo}
@@ -40,7 +41,14 @@ const Footer = () => {
             <p>Patna, Bihar 800014, India</p>
             <div className="mt-3">
               <FaEnvelope size={18} className="inline mr-2" />
-              <span>technika@bitmesra.ac.in</span>
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=technika@bitmesra.ac.in" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:underline"
+              >
+                technika@bitmesra.ac.in
+              </a>
             </div>
             <div className="mt-1">
               <FaPhone size={18} className="inline mr-2" />

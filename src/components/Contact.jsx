@@ -35,8 +35,7 @@ const Contact = () => {
     },
     {
       key: "5",
-      image:
-        "src/assets/PremKumarjpg.jpg",
+      image:"src/assets/PremKumar.jpg",
       name: "Prem Kumar Singh",
       phone: "+91 7464025690",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
@@ -72,7 +71,7 @@ const Contact = () => {
         {contacts?.map((contact) => (
           <Fade
             key={contact?.key}
-            duration={600} // Uniform duration for all animations
+            duration={600} 
             triggerOnce={true}
             direction="up"
           >
