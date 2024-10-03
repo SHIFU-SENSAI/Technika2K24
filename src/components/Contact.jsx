@@ -36,7 +36,7 @@ const Contact = () => {
     {
       key: "5",
       image:
-        "src/assets/365293.jpg",
+        "src/assets/PremKumarjpg.jpg",
       name: "Prem Kumar Singh",
       phone: "+91 7464025690",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
