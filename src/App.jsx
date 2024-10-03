@@ -5,6 +5,7 @@ import Competitions from "./components/Competitions";
 import Workshops from "./components/Workshops";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Events from "./components/events";
 import Account from "./components/Account";
 import { BrowserRouter, Outlet } from "react-router-dom";
 import Register from "./components/Register";
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/account" element={<Account />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />

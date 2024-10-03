@@ -52,7 +52,7 @@ const NavBar = ({ logged }) => {
             Merchandise
           </a>
           <Link
-            to="/competitions"
+            to="/events"
             className="flex flex-col items-center text-base text-white hover:text-[#af3a40] transition-colors font-medium"
           >
             <Icon icon={calendar} size={20} className="mb-1" />

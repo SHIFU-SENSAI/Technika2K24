@@ -83,7 +83,7 @@ const Workshops = () => {
   return (
     <div className="relative container mx-auto overflow-hidden w-full">
       <h1 className="text-4xl font-bold text-white text-center pt-6 z-10 relative">
-        Our Workshops
+        OUR WORKSHOPS
       </h1>
 
       <figure className="w-full h-full absolute inset-0 z-0">
