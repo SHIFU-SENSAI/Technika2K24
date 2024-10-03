@@ -37,14 +37,7 @@ const ContactCard = ({ image, name, email, phone, insta, linkedin }) => {
           >
             <Icon icon={instagram} size={40} className="text-gray-900 hover:text-pink-400" />
           </a>
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-125"
-          >
-            <Icon icon={linkedinSquare} size={40} className="text-gray-900 hover:text-blue-500" />
-          </a>
+         
         </div>
       </div>
     </div>
