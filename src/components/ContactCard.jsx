@@ -1,29 +1,49 @@
 import Icon from "react-icons-kit";
 import { instagram } from "react-icons-kit/fa/instagram";
 import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 
 const ContactCard = ({ image, name, email, phone, insta, linkedin }) => {
   return (
-    <div className="relative ">
-      <div className="w-[285px] h-[310px] md:w-[380px] bg-primary  p-5 border-4 border-black contact-form-shadow z-10 mx-auto font-Default tracking-widest flex flex-col justify-between ">
-        <div className="flex justify-start  items-center gap-2  w-full  ">
-          <figure className="overflow-hidden w-1/2 ">
-            <img className="object-cover w-32 h-32" src={`${image}`} alt="" />
+    <div className="relative">
+      <div className="w-[285px] h-[340px] md:w-[380px] bg-gradient-to-r from-green-300 via-blue-400 to-teal-600 p-6 border-4 border-green-600 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out mx-auto font-Default tracking-wider flex flex-col justify-between">
+        {/* Profile Section */}
+        <div className="flex justify-center items-center gap-4 w-full">
+          <figure className="overflow-hidden w-32 h-32 rounded-full border-4 border-teal-100">
+            <img
+              className="object-cover w-full h-full rounded-full transition-transform duration-300 hover:scale-110"
+              src={image}
+              alt={name}
+            />
           </figure>
-          <p className="text-2xl font-bold  break-words  w-1/2 ">{name}</p>
         </div>
 
-        <div className="flex flex-col gap-2 my-5 text-xl font-bold break-words">
+        {/* Name and Contact Info */}
+        <div className="text-center mt-3">
+          <p className="text-2xl font-bold text-gray-900 break-words">{name}</p>
+        </div>
+        <div className="flex flex-col gap-2 mt-2 text-lg font-bold text-gray-800 text-center break-words">
           <p>{phone}</p>
           <p className="text-sm">{email}</p>
         </div>
-        <div className="flex justify-around">
-          <a href={`${insta}`} target="_blank" rel="noopener noreferrer">
-            <Icon icon={instagram} size={48} />
+
+        {/* Social Links */}
+        <div className="flex justify-around mt-5">
+          <a
+            href={insta}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform transform hover:scale-125"
+          >
+            <Icon icon={instagram} size={40} className="text-gray-900 hover:text-pink-400" />
           </a>
-          <a href={`${linkedin}`} target="_blank" rel="noopener noreferrer">
-            <Icon icon={linkedinSquare} size={48} />
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform transform hover:scale-125"
+          >
+            <Icon icon={linkedinSquare} size={40} className="text-gray-900 hover:text-blue-500" />
           </a>
         </div>
       </div>
@@ -31,13 +51,13 @@ const ContactCard = ({ image, name, email, phone, insta, linkedin }) => {
   );
 };
 
-export default ContactCard;
-
 ContactCard.propTypes = {
-  image: Proptypes.string,
-  name: Proptypes.string,
-  email: Proptypes.string,
-  phone: Proptypes.string,
-  linkedin: Proptypes.string,
-  insta: Proptypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  linkedin: PropTypes.string,
+  insta: PropTypes.string,
 };
+
+export default ContactCard;

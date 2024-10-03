@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 import BitLogo from "../assets/mesra_logo.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { menu } from "react-icons-kit/feather/menu";
-import Icon from "react-icons-kit";
 import { x } from "react-icons-kit/feather/x";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-
-const auth = getAuth();
+import Icon from "react-icons-kit";
 
 const NavBar = ({ logged }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,121 +11,149 @@ const NavBar = ({ logged }) => {
   const handleOpen = () => {
     setMenuOpen(!menuOpen);
   };
-  // console.log(menuOpen);
-
-  // console.log(logged);
 
   return (
-    <div>
-      <nav className="flex justify-between  px-4 sm:px-20 bg-primary py-3 md:flex md:items-center md:justify-between relative items-center">
-        <div className="w-20">
-          <img src={BitLogo} alt="College Logo" />
+    <header className="w-full bg-[#f3f4f6] shadow-lg">
+      <nav className="flex justify-between items-center py-2 px-4 sm:px-20 h-17">
+        {/* Logo */}
+        <div className="w-24">
+          <Link to="/">
+            <img
+              src={BitLogo}
+              alt="College Logo"
+              className="w-full h-auto object-contain"
+            />
+          </Link>
         </div>
-        <div className="text-black font-bold md:flex justify-center lg:gap-12 gap-6 items-center h-14 rounded-xl mx-auto font-Default lowercase text-sm lg:text-lg hidden ">
-          <Link to="/" className="hover:text-[#9360fa] duration-500">
+
+        {/* Centered Desktop Menu */}
+        <div className="hidden md:flex gap-10 items-center justify-center mx-auto">
+          <Link
+            to="/"
+            className="text-base text-gray-700 hover:text-[#9360fa] transition-colors font-medium"
+          >
             Home
           </Link>
           <a
             href="https://forms.gle/oVjowrQF1KJ7iRHB8"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-base text-gray-700 hover:text-[#9360fa] transition-colors font-medium"
           >
             Merchandise
           </a>
           <Link
             to="/competitions"
-            className="hover:text-[#9360fa] duration-500"
+            className="text-base text-gray-700 hover:text-[#9360fa] transition-colors font-medium"
           >
             Events
           </Link>
-          <Link to="/workshops" className="hover:text-[#9360fa] duration-500">
+          <Link
+            to="/workshops"
+            className="text-base text-gray-700 hover:text-[#9360fa] transition-colors font-medium"
+          >
             Workshops
           </Link>
-          <Link to="/contact" className="hover:text-[#9360fa] duration-500">
+          <Link
+            to="/contact"
+            className="text-base text-gray-700 hover:text-[#9360fa] transition-colors font-medium"
+          >
             Contact
           </Link>
-          <Link to="/about" className="hover:text-[#9360fa] duration-500">
+          <Link
+            to="/about"
+            className="text-base text-gray-700 hover:text-[#9360fa] transition-colors font-medium"
+          >
             About
           </Link>
         </div>
 
-        <div
-          className={`absolute right-20 ${
-            menuOpen ? "flex" : "hidden"
-          } justify-between gap-5 items-start flex-col bg-black text-white font-bold h-[85vh]  mx-auto font-Default lowercase text-lg top-24 z-40 w-full left-0  px-8  ease-in-out duration-500 border-b-2 border-[#9360fa] pb-7 `}
-        >
-          <h1 className="text-5xl ">Menu</h1>
+        {/* Login Button */}
+        <div className="hidden md:block">
           <Link
+            to={logged ? "/account" : "/login"}
+            className="text-white bg-[#9360FA] px-6 py-2 rounded-full border border-transparent hover:bg-[#7b50d4] transition font-medium"
+          >
+            {logged ? "Your Account" : "Login"}
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button onClick={handleOpen} aria-label="Menu Button">
+            <Icon icon={menuOpen ? x : menu} size={30} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } md:hidden absolute top-0 left-0 w-full h-screen bg-black text-white z-50 transition-transform duration-500 ease-in-out`}
+      >
+        <div className="flex flex-col items-start p-8 space-y-6">
+          <button
             onClick={handleOpen}
+            className="self-end text-white text-2xl focus:outline-none"
+            aria-label="Close Menu"
+          >
+            <Icon icon={x} size={30} />
+          </button>
+          <Link
             to="/"
-            className="hover:text-[#9360fa] duration-500"
+            onClick={handleOpen}
+            className="text-white hover:text-[#9360fa] transition-colors text-2xl"
           >
             Home
           </Link>
           <Link
-            onClick={handleOpen}
             to="/competitions"
-            className="hover:text-[#9360fa] duration-500"
+            onClick={handleOpen}
+            className="text-white hover:text-[#9360fa] transition-colors text-2xl"
           >
             Competitions
           </Link>
           <a
-            onClick={handleOpen}
             href="https://forms.gle/oVjowrQF1KJ7iRHB8"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleOpen}
+            className="text-white hover:text-[#9360fa] transition-colors text-2xl"
           >
             Merchandise
           </a>
           <Link
-            onClick={handleOpen}
             to="/workshops"
-            className="hover:text-[#9360fa] duration-500"
+            onClick={handleOpen}
+            className="text-white hover:text-[#9360fa] transition-colors text-2xl"
           >
             Workshops
           </Link>
           <Link
-            onClick={handleOpen}
             to="/contact"
-            className="hover:text-[#9360fa] duration-500"
+            onClick={handleOpen}
+            className="text-white hover:text-[#9360fa] transition-colors text-2xl"
           >
             Contact
           </Link>
           <Link
-            onClick={handleOpen}
             to="/about"
-            className="hover:text-[#9360fa] duration-500"
+            onClick={handleOpen}
+            className="text-white hover:text-[#9360fa] transition-colors text-2xl"
           >
             About
           </Link>
           <Link
+            to={logged ? "/account" : "/login"}
             onClick={handleOpen}
-            to={logged ? "/account" : "/login"}
-            className="hover:text-white duration-500 bg-[#9360FA] w-full py-2 px-4 rounded -ml-4 border border-white hover:brightness-50"
+            className="text-white bg-[#9360fa] py-2 px-6 rounded-md border border-white hover:brightness-110 transition w-full text-center"
           >
             {logged ? "Your Account" : "Login"}
           </Link>
         </div>
-
-        <div className="hidden md:block">
-          <Link
-            to={logged ? "/account" : "/login"}
-            className="text-white bg-[#9360FA] p-3 border border-white nav_Box_shadow h-full font-Default text-sm duration-500 lg:text-lg "
-          >
-            {logged ? "Your Account" : "Login"}
-          </Link>
-        </div>
-        <div className="block md:hidden">
-          <button onClick={handleOpen}>
-            <Icon
-              className="duration-1000"
-              icon={menuOpen ? x : menu}
-              size={30}
-            />
-          </button>
-        </div>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 };
 

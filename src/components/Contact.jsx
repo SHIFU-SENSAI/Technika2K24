@@ -1,4 +1,4 @@
-import Astro3 from "../assets/Astro3.png";
+import Eco from "../assets/eco.png";
 import ContactCard from "./ContactCard";
 import Proptypes from "prop-types";
 import { Fade } from "react-awesome-reveal";
@@ -15,7 +15,6 @@ const Contact = () => {
       insta:
         "https://www.instagram.com/_deo.shreyas_?igsh=MXVjcjlkY2ZjNzRpMQ==",
     },
-
     {
       key: "2",
       image:
@@ -50,24 +49,27 @@ const Contact = () => {
   ];
 
   return (
-    <div className="relative container h-full  mx-auto overflow-hidden w-full ">
-      <h1 className="text-4xl font-bold text-white text-center pt-6 z-10 relative ">
+    <div className="relative container h-full mx-auto overflow-hidden w-full">
+      {/* Title */}
+      <h1 className="text-4xl font-bold text-white text-center pt-6 z-10 relative">
         Contact
       </h1>
 
-      <figure className="w-screen ">
+      {/* Background Image */}
+      <figure className="w-full h-full absolute inset-0">
         <img
-          src={Astro3}
+          src={Eco}
           alt=""
-          className="absolute left-0 top-0 opacity-50 "
+          className="object-cover w-full h-full opacity-60"
         />
       </figure>
 
-      <div className="py-10 flex justify-center items-center flex-wrap  gap-10   ">
+      {/* Cards Section */}
+      <div className="py-10 flex justify-center items-center flex-wrap gap-10 z-10 relative">
         {contacts?.map((contact) => (
           <Fade
             key={contact?.key}
-            duration={contact.key * 300}
+            duration={600} // Uniform duration for all animations
             triggerOnce={true}
             direction="up"
           >
