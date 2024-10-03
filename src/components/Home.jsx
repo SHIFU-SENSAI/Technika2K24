@@ -20,7 +20,7 @@ const Home = ({ logged }) => {
             cascade
             damping={0.2}>
             TECHNIKA 2K24
-          </Fade>
+          </Fade>   
 
           <p className="text-2xl sm:text-2xl md:text-4xl text-center tracking-[0.7rem] md:tracking-[1rem] font-bold text-[#ffffff] font-Default">
             Innovating Today, Sustaining Tomorrow
