@@ -46,3 +46,25 @@
 * {
   scroll-behavior: smooth;
 }
+.grid {
+  grid-gap: 12px; /* Reduced gap between cards */
+}
+/* Default styling for cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers the cards horizontally */
+  align-items: center;     /* This centers the cards vertically */
+  gap: 10px; /* Adjust as needed */
+}
+
+/* Media query for laptop version */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .cards-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 300px; /* Set your card width */
+  }
+}

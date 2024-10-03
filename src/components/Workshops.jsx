@@ -1,72 +1,62 @@
 import React, { useState, useRef } from "react";
 import WorkshopCard from "./WorkshopCard";
+import CardContainer from "./CardContainer"; // Import CardContainer
 import Eco from "../assets/eco.png";
+import "../general.css";
 
 const workshopsData = [
   {
     id: 1,
-    title: "Web Development Workshop",
-    image: "/images/web-dev.jpg", 
-    description: "Learn the basics of web development with HTML, CSS, and JavaScript.",
-    specifications: "Duration: 3 days | Level: Beginner | Tools: VS Code, GitHub",
-    formLink: "https://forms.gle/web-dev-workshop", 
+    title: "Generative AI Workshop",
+    image: "/images/web-dev.jpg",
+    description:
+      "Explore the innovative world of artificial intelligence in this hands-on workshop focused on Generative AI. Learn about neural networks, machine learning models, and how AI can be used to generate creative content, from art and music to text and more. Ideal for those passionate about AI innovation.",
+    formLink: "https://forms.gle/2frqAkrnNz9wUhwP9",
   },
   {
     id: 2,
-    title: "Machine Learning Workshop",
-    image: "/images/ml-workshop.jpg", 
-    description: "Dive into machine learning algorithms and Python libraries like TensorFlow.",
-    specifications: "Duration: 5 days | Level: Intermediate | Tools: Jupyter Notebook, TensorFlow",
-    formLink: "https://forms.gle/ml-workshop", 
+    title: "Basic Trading Workshop",
+    image: "/images/ml-workshop.jpg",
+    description:
+      "Learn the fundamentals of stock market trading and investment strategies in this beginner-friendly workshop. Gain insights into financial markets, trading platforms, and techniques to analyse stocks, making you ready to start your trading journey with confidence.",
+    formLink: "https://forms.gle/1PiBsS4NDLagxspi6",
   },
   {
     id: 3,
-    title: "UI/UX Design Workshop",
-    image: "/images/ui-ux.jpg", 
-    description: "Understand design principles and build interactive prototypes using Figma.",
-    specifications: "Duration: 2 days | Level: Beginner | Tools: Figma, Adobe XD",
-    formLink: "https://forms.gle/ui-ux-workshop", 
+    title: "Reel making Workshop",
+    image: "/images/ui-ux.jpg",
+    description:
+      "Unlock your creativity with our hands-on Reel Making Workshop! Learn the essentials of storytelling, shooting, and editing short videos for platforms like Instagram and TikTok. From ideation to execution, you'll discover techniques to make visually captivating reels that stand out.",
+    formLink: "https://forms.gle/UAc3pX6SpfPsWQMy5",
   },
   {
     id: 4,
-    title: "UI/UX Design Workshop",
-    image: "/images/ui-ux.jpg", 
-    description: "Understand design principles and build interactive prototypes using Figma.",
-    specifications: "Duration: 2 days | Level: Beginner | Tools: Figma, Adobe XD",
-    formLink: "https://forms.gle/ui-ux-workshop", 
+    title: "Drone Workshop",
+    image: "/images/ui-ux.jpg",
+    description:
+      "Dive into the world of drones in this interactive workshop. Learn about UAV design, flight control, and drone applications in various industries. Whether you are an aspiring drone pilot or an enthusiast, this workshop will provide hands-on experience in flying and maintaining drones.",
+    formLink: "https://forms.gle/dmNccfHBhiz9FTpY7",
   },
   {
     id: 5,
-    title: "UI/UX Design Workshop",
-    image: "/images/ui-ux.jpg", 
-    description: "Understand design principles and build interactive prototypes using Figma.",
-    specifications: "Duration: 2 days | Level: Beginner | Tools: Figma, Adobe XD",
-    formLink: "https://forms.gle/ui-ux-workshop", 
-  },
-  {
-    id: 6,
-    title: "UI/UX Design Workshop",
+    title: "MATLAB",
     image: "/images/ui-ux.jpg",
-    description: "Understand design principles and build interactive prototypes using Figma.",
-    specifications: "Duration: 2 days | Level: Beginner | Tools: Figma, Adobe XD",
-    formLink: "https://forms.gle/ui-ux-workshop", 
+    description:
+      "Join our hands-on MATLAB workshop to learn the essentials of numerical computing, data analysis, and programming. You'll explore the MATLAB interface, basic coding concepts, data visualization, and real-world applications across various fields.",
+    formLink: "https://forms.gle/rmvJYxSqsEDaHU4A9",
   },
 ];
 
-// WorkshopDetails component for displaying detailed information about the selected workshop
-const WorkshopDetails = ({ title, description, specifications, formLink }) => {
+const WorkshopDetails = ({ title, description, formLink }) => {
   return (
-    <div className="bg-gradient-to-r from-green-300 via-blue-400 to-teal-600 p-6 border-4 border-green-600 text-white rounded-lg relative z-10 max-w-xl mx-auto mt-8">
+    <div className="bg-white bg-opacity-90 p-6 border-4 border-green-600 text-black rounded-lg max-w-xl mx-auto mt-8 shadow-lg">
       <h2 className="text-3xl font-bold mb-4 text-center">{title}</h2>
       <p className="text-lg mb-4 text-center">{description}</p>
-      <p className="text-sm mb-6 text-center">{specifications}</p>
-
-      {/* Centered Register Now Button */}
       <div className="flex justify-center">
         <a
-          href={formLink} // Check if the link is properly passed
-          target="_blank" // Opens in a new tab
-          rel="noopener noreferrer" // Security attribute to prevent malicious attacks
+          href={formLink}
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 duration-300"
         >
           Register Now
@@ -76,53 +66,53 @@ const WorkshopDetails = ({ title, description, specifications, formLink }) => {
   );
 };
 
-// Main Workshops component to display all workshops
 const Workshops = () => {
-  const [selectedWorkshop, setSelectedWorkshop] = useState(null); // State to track the selected workshop
-  const registerButtonRef = useRef(null); // Reference to the Register button section
+  const [selectedWorkshop, setSelectedWorkshop] = useState(null);
+  const registerButtonRef = useRef(null);
 
   const handleWorkshopClick = (workshop) => {
-    setSelectedWorkshop(workshop); // Set the selected workshop when clicked
-
-    // If there is a Register button reference, make it visible but don't scroll away
+    setSelectedWorkshop(workshop);
     if (registerButtonRef.current) {
       registerButtonRef.current.scrollIntoView({
-        behavior: "smooth", // Smooth scrolling effect
-        block: "nearest", // Don't scroll away from the current section
+        behavior: "smooth",
+        block: "nearest",
       });
     }
   };
 
   return (
-    <div className="relative container h-full mx-auto overflow-hidden w-full">
-      <h1 className="text-4xl font-bold text-white text-center pt-6 z-10 relative">Our Workshops</h1>
+    <div className="relative container mx-auto overflow-hidden w-full">
+      <h1 className="text-4xl font-bold text-white text-center pt-6 z-10 relative">
+        Our Workshops
+      </h1>
 
-      {/* Background image for the section */}
       <figure className="w-full h-full absolute inset-0 z-0">
-        <img src={Eco} alt="Technika" className="object-cover w-full h-full opacity-60" />
+        <img
+          src={Eco}
+          alt="Technika"
+          className="object-cover w-full h-full opacity-60"
+        />
       </figure>
 
-      {/* Grid layout for workshop cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 relative z-10">
+      {/* Wrap workshop cards with CardContainer */}
+      <CardContainer>
         {workshopsData.map((workshop) => (
           <WorkshopCard
             key={workshop.id}
             image={workshop.image}
             title={workshop.title}
             description={workshop.description}
-            onClick={() => handleWorkshopClick(workshop)} // Set the selected workshop and handle click
+            onClick={() => handleWorkshopClick(workshop)}
           />
         ))}
-      </div>
+      </CardContainer>
 
-      {/* Display selected workshop details with register button */}
       {selectedWorkshop && (
-        <div ref={registerButtonRef}> {/* Add a ref here */}
+        <div ref={registerButtonRef} className="relative z-20">
           <WorkshopDetails
             title={selectedWorkshop.title}
             description={selectedWorkshop.description}
-            specifications={selectedWorkshop.specifications}
-            formLink={selectedWorkshop.formLink} // Ensure this link is passed correctly
+            formLink={selectedWorkshop.formLink}
           />
         </div>
       )}
