@@ -8,7 +8,7 @@ const Contact = () => {
     {
       key: "1",
       image:
-        "https://lh3.googleusercontent.com/drive-viewer/AKGpihb3DnYBj7HHZcl1MU4MizVgqFyPy2uVfvdn8puFqYH7rlf4uhW7-HgObKby_Sa7uageKLIGt4D7MfFPh9tSh1pDd2mdAQ=w350-h633",
+        "src/assets/365293.jpg",
       name: "Suryansh Sinha",
       phone: "+91 8252624667",
       insta:"https://www.instagram.com/_deo.shreyas_?igsh=MXVjcjlkY2ZjNzRpMQ==",
@@ -16,7 +16,7 @@ const Contact = () => {
     {
       key: "2",
       image:
-        "https://lh3.googleusercontent.com/drive-viewer/AKGpihaj8xrlXGKgcxeIHQVPz9ADRKoJ4zUj8nz_trV0nH2yONokbWt64aXVGrPm4Fc8uzVkfVYdZFmNuN0wb7mKavOf_ABaOQ=w1366-h633",
+        "src/assets/365293.jpg",
       name: "Balajee",
       phone: "+91 9693650110",
       insta: "https://www.instagram.com/_mr_harsh007_?igsh=OXhnajAwdnF6bnZy",
@@ -24,15 +24,14 @@ const Contact = () => {
     {
       key: "3",
       image:
-        "https://lh3.googleusercontent.com/drive-viewer/AKGpihZuyZYBItbmqTuxdC0pYoUD1xODrEAaYxIdNS1gpTe31LPAAWTXWus1rcjar2ibhjg4N-bMG769GdFQkdv8Mpckmmn7=w1366-h633",
+        "src/assets/AsmanKumari.jpg",
       name: "Asman Kumari",
       phone: "+91 7857809775",
       insta: "https://www.instagram.com/priyanshu24mach/",
     },
     {
       key: "4",
-      image:
-        "https://lh3.googleusercontent.com/drive-viewer/AKGpihbUwof0cypTfGzpBMXtCq86ISTv4Z3rZk1oHY44tFYYNnFTl6Omj0O_WUQPHdDr7d2dhossUraS7EqGooe1Bj-0qpKJGg=w1366-h633",
+      image:"src/assets/PiyushJha.jpg",
       name: "Piyush Kumar Jha",
       phone: "+91 7970570528",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
@@ -40,7 +39,7 @@ const Contact = () => {
     {
       key: "5",
       image:
-        "https://lh3.googleusercontent.com/drive-viewer/AKGpihbUwof0cypTfGzpBMXtCq86ISTv4Z3rZk1oHY44tFYYNnFTl6Omj0O_WUQPHdDr7d2dhossUraS7EqGooe1Bj-0qpKJGg=w1366-h633",
+        "src/assets/365293.jpg",
       name: "Prem Kumar Singh",
       phone: "+91 7464025690",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
@@ -48,7 +47,7 @@ const Contact = () => {
     {
       key: "6",
       image:
-        "https://lh3.googleusercontent.com/drive-viewer/AKGpihbUwof0cypTfGzpBMXtCq86ISTv4Z3rZk1oHY44tFYYNnFTl6Omj0O_WUQPHdDr7d2dhossUraS7EqGooe1Bj-0qpKJGg=w1366-h633",
+        "src/assets/365293.jpg",
       name: "Aadarsh Raj Alok",
       phone: "+91 7079901930",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",

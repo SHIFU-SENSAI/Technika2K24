@@ -9,25 +9,34 @@ const eventsData = [
     name: "Dev Conquest",
     img: "/images/event1.jpg",
     desc: "Unleash your creativity and coding skills in an intense hackathon. Compete with the brightest minds to develop innovative solutions to real-world problems and claim the title of Tech Wizard!",
-    pricing: "Free",
+    pricing: "$10",
     evid: "event1",
   },
   {
     id: 2,
-    name: "Competitive Programming",
+    name: "Algo Apex",
     img: "/images/event2.jpg",
-    desc: "This is a description for Sample Event 2.",
+    desc: "Sharpen your algorithms and take on complex coding challenges in this competitive programming event. Show your problem-solving prowess and climb the leaderboard to emerge as the algorithm master.",
     pricing: "$10",
     evid: "event2",
   },
   {
     id: 3,
-    name: "Web Development",
+    name: "Ampere Assemble",
     img: "/images/event3.jpg",
-    desc: "This is a description for Sample Event 3.",
+    desc: "Dive into the world of circuits and electronics with Ampere Assemble. This electrifying competition will test your knowledge and practical skills in assembling and troubleshooting complex electronic systems.",
     pricing: "$10",
     evid: "event3",
   },
+  {
+    id: 4,
+    name: "Robo Gladiators (Robo War)",
+    img: "/images/event4.jpg",
+    desc: "This is a description for Sample Event 4.",
+    pricing: "$10",
+    evid: "event4",
+  },
+
 ];
 
 const EventDetails = ({ name, desc, pricing, evid }) => {
@@ -92,7 +101,7 @@ const Events = () => {
         />
       </div>
 
-      <div className="space-y-8 relative z-10">
+      <div className="space-y-1 relative z-10">
         {filteredEvents.map((event) => (
           <EventCard
             key={event.id}
