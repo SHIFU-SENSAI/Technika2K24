@@ -1,5 +1,4 @@
 import Astro2 from "../assets/astro2.png";
-import EventCard from "./EventCard";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";

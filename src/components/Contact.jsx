@@ -10,7 +10,6 @@ const Contact = () => {
       image:
         "https://lh3.googleusercontent.com/drive-viewer/AKGpihb3DnYBj7HHZcl1MU4MizVgqFyPy2uVfvdn8puFqYH7rlf4uhW7-HgObKby_Sa7uageKLIGt4D7MfFPh9tSh1pDd2mdAQ=w350-h633",
       name: "Suryansh Sinha",
-      email: "suryansh2003@gmail.com",
       phone: "+91 8252624667",
       insta:"https://www.instagram.com/_deo.shreyas_?igsh=MXVjcjlkY2ZjNzRpMQ==",
     },
@@ -19,7 +18,6 @@ const Contact = () => {
       image:
         "https://lh3.googleusercontent.com/drive-viewer/AKGpihaj8xrlXGKgcxeIHQVPz9ADRKoJ4zUj8nz_trV0nH2yONokbWt64aXVGrPm4Fc8uzVkfVYdZFmNuN0wb7mKavOf_ABaOQ=w1366-h633",
       name: "Balajee",
-      email: "rajstark700@gmail.com",
       phone: "+91 9693650110",
       insta: "https://www.instagram.com/_mr_harsh007_?igsh=OXhnajAwdnF6bnZy",
     },
@@ -28,7 +26,6 @@ const Contact = () => {
       image:
         "https://lh3.googleusercontent.com/drive-viewer/AKGpihZuyZYBItbmqTuxdC0pYoUD1xODrEAaYxIdNS1gpTe31LPAAWTXWus1rcjar2ibhjg4N-bMG769GdFQkdv8Mpckmmn7=w1366-h633",
       name: "Asman Kumari",
-      email: "priyanshu24mach@gmail.com",
       phone: "+91 7857809775",
       insta: "https://www.instagram.com/priyanshu24mach/",
     },
@@ -37,7 +34,6 @@ const Contact = () => {
       image:
         "https://lh3.googleusercontent.com/drive-viewer/AKGpihbUwof0cypTfGzpBMXtCq86ISTv4Z3rZk1oHY44tFYYNnFTl6Omj0O_WUQPHdDr7d2dhossUraS7EqGooe1Bj-0qpKJGg=w1366-h633",
       name: "Piyush Kumar Jha",
-      email: "akhilabhishek1711@gmail.com",
       phone: "+91 7970570528",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
     },
@@ -46,7 +42,6 @@ const Contact = () => {
       image:
         "https://lh3.googleusercontent.com/drive-viewer/AKGpihbUwof0cypTfGzpBMXtCq86ISTv4Z3rZk1oHY44tFYYNnFTl6Omj0O_WUQPHdDr7d2dhossUraS7EqGooe1Bj-0qpKJGg=w1366-h633",
       name: "Prem Kumar Singh",
-      email: "akhilabhishek1711@gmail.com",
       phone: "+91 7464025690",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
     },
@@ -55,7 +50,6 @@ const Contact = () => {
       image:
         "https://lh3.googleusercontent.com/drive-viewer/AKGpihbUwof0cypTfGzpBMXtCq86ISTv4Z3rZk1oHY44tFYYNnFTl6Omj0O_WUQPHdDr7d2dhossUraS7EqGooe1Bj-0qpKJGg=w1366-h633",
       name: "Aadarsh Raj Alok",
-      email: "akhilabhishek1711@gmail.com",
       phone: "+91 7079901930",
       insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
     },
