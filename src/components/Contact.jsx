@@ -10,7 +10,7 @@ const Contact = () => {
       image:"src/assets/365293.jpg",
       name: "Suryansh Sinha",
       phone: "+91 8252624667",
-      insta:"https://www.instagram.com/_deo.shreyas_?igsh=MXVjcjlkY2ZjNzRpMQ==",
+      insta:"https://www.instagram.com/srivastava_0302_/",
     },
     {
       key: "2",
@@ -24,21 +24,21 @@ const Contact = () => {
       image:"src/assets/AsmanKumari.jpg",
       name: "Asman Kumari",
       phone: "+91 7857809775",
-      insta: "https://www.instagram.com/priyanshu24mach/",
+      insta: "https://www.instagram.com/asu_753/",
     },
     {
       key: "4",
       image:"src/assets/PiyushJha.jpg",
       name: "Piyush Kumar Jha",
       phone: "+91 7970570528",
-      insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
+      insta: "https://www.instagram.com/piyushkumar_jha26/",
     },
     {
       key: "5",
       image:"src/assets/PremKumar.jpg",
       name: "Prem Kumar Singh",
       phone: "+91 7464025690",
-      insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
+      insta: "https://www.instagram.com/prem11012004/",
     },
     {
       key: "6",
@@ -46,7 +46,7 @@ const Contact = () => {
         "src/assets/365293.jpg",
       name: "Aadarsh Raj Alok",
       phone: "+91 7079901930",
-      insta: "https://www.instagram.com/abhisheekk._?igsh=NXZmNmNtcXRvNXQ0",
+      insta: "https://www.instagram.com/su.bh2807/",
     },
   ];
 
