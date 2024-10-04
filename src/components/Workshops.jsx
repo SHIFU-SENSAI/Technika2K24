@@ -45,6 +45,14 @@ const workshopsData = [
       "Join our hands-on MATLAB workshop to learn the essentials of numerical computing, data analysis, and programming. You'll explore the MATLAB interface, basic coding concepts, data visualization, and real-world applications across various fields.",
     formLink: "https://forms.gle/rmvJYxSqsEDaHU4A9",
   },
+  {
+    id: 6,
+    title: "Photography",
+    image: "/images/ui-ux.jpg",
+    description:
+      "Join our hands-on Photography workshop to learn the essentials of photography, data analysis, and programming. You'll explore the MATLAB interface, basic coding concepts, data visualization, and real-world applications across various fields.",
+    formLink: "https://forms.gle/rmvJYxSqsEDaHU4A9",
+  },
 ];
 
 const WorkshopDetails = ({ title, description, formLink }) => {
