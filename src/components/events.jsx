@@ -85,7 +85,7 @@ const Events = () => {
     return (
         <div id="events-section" className="relative container mx-auto overflow-hidden w-full px-4 py-8">
             <h1 className="text-4xl font-bold text-white text-center mb-8 z-10 relative">
-                Our Events
+                 EVENTS
             </h1>
 
             <figure className="w-full h-full absolute inset-0 z-0">

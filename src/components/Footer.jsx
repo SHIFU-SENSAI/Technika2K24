@@ -13,9 +13,7 @@ const Footer = () => {
             <div className="mt-3 flex flex-col items-center md:items-start">
               <span className="text-base mb-2">FOLLOW US ON</span>
               <div>
-                <a href="#" className="text-white hover:text-blue-500 inline-block mx-2">
-                  <FaFacebookF size={24} />
-                </a>
+                
                 <a href="https://www.youtube.com/@Technikabitp" className="text-white hover:text-red-500 inline-block mx-2">
                   <FaYoutube size={24} />
                 </a>
